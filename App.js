@@ -49,7 +49,7 @@ export default function App() {
               <Text style={styles.sectionTitle}>Estudios</Text>
               <View style={styles.listItem}>
                 <Text style={styles.itemText}>
-                  Bachillerato · Análisis y Desarrollo de Software · Estudios en inglés A1 y A4
+                  Bachillerato · Análisis y Desarrollo de Software · Estudios en inglés A1 y sin finalizar A4 
                 </Text>
               </View>
             </View>
