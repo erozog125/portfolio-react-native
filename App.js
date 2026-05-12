@@ -44,7 +44,7 @@ export default function App() {
               </View>
           </View>
 
-          {/* sección de experiencia profesional */}
+          {/* sección de experiencia profesional  */}
           <View style={styles.section}>
             <Text style={styles.sectionTitle}>Experiencia profesional</Text>
             <View style={styles.badgeContainer}>
