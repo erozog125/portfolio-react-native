@@ -21,6 +21,46 @@ export default function App() {
             experiencia del usuario en cada pantalla.
           </Text>
         </View>
+
+        <View>
+          <Text>Proyectos</Text>
+
+          <View>
+            <Image
+              source={{ uri: 'https://picsum.photos/300' }}
+              style={{ width: 300, height: 160 }}
+            />
+            <Text>Control de gastos personales</Text>
+            <Text>
+              App para registrar ingresos y gastos, con resumen por categoría y
+              recordatorios básicos.
+            </Text>
+          </View>
+
+          <View>
+            <Image
+              source={{ uri: 'https://picsum.photos/300' }}
+              style={{ width: 300, height: 160 }}
+            />
+            <Text>Lista de tareas offline</Text>
+            <Text>
+              Gestión de pendientes sincronizada localmente, con filtros por
+              prioridad y fecha.
+            </Text>
+          </View>
+
+          <View>
+            <Image
+              source={{ uri: 'https://picsum.photos/300' }}
+              style={{ width: 300, height: 160 }}
+            />
+            <Text>Explorador de clima urbano</Text>
+            <Text>
+              Vista del clima por barrio usando datos públicos y favoritos guardados
+              en el dispositivo.
+            </Text>
+          </View>
+        </View>
       </ScrollView>
     </SafeAreaView>
   );
