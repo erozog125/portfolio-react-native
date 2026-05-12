@@ -121,7 +121,7 @@ const styles = StyleSheet.create({
       justifyContent: 'center',
     },
     phoneFrame: {
-      width: 360, // Medidas más realistas para un mockup de celular
+      width: 360, 
       height: 720,
       backgroundColor: '#000',
       borderRadius: 40,
@@ -144,7 +144,7 @@ const styles = StyleSheet.create({
     },
     screen: {
       flex: 1,
-      backgroundColor: '#F8FAFC', // Fondo claro para el contenido
+      backgroundColor: '#F8FAFC', 
       borderRadius: 28,
       overflow: 'hidden',
     },
