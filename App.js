@@ -8,15 +8,16 @@ export default function App() {
         <View style={styles.notch} />
         <View style={styles.screen}>
           <ScrollView contentContainerStyle={styles.content} showsVerticalScrollIndicator={false}>
-            <Image source={require('./assets/profile.png')} style={styles.logo} />
-            <Text style={styles.name}>Edwin Rozo Gómez</Text>
-            <Text style={styles.role}>Desarrollador React Native</Text>
+            <Image source={require('./assets/FotoFondoBlanco.png')} style={styles.logo} />
+            <Text style={styles.name}>Eddy Santiago Guarin </Text>
+            <Text style={styles.role}>Desarrollador Frontend | Desarrollador Backend | Fullstack</Text>
 
             <View style={styles.section}>
               <Text style={styles.sectionTitle}>Acerca de mí</Text>
               <View style={styles.listItem}>
                 <Text style={styles.itemText}>
-                  Diseñador de experiencias móviles con enfoque minimalista. Me apasiona crear apps claras, funcionales y con una paleta azul-gris que transmite profesionalismo.
+                  Estudiante de Ingeniería de Sistemas Y Tecnología en analisis y desarrollo de software 
+                  con experiencia en desarrollo web y móvil, apasionado por crear soluciones digitales innovadoras y eficientes.
                 </Text>
               </View>
             </View>
@@ -25,21 +26,21 @@ export default function App() {
               <Text style={styles.sectionTitle}>Proyectos</Text>
               <Pressable style={styles.projectItem}>
                 <View style={styles.projectImagePlaceholder}>
-                  <Image source={require('./assets/PA.png')} style={styles.projectImage} />
+                  <Image source={require('./assets/supermaket.png')} style={styles.projectImage} />
                 </View>
                 <View style={styles.projectInfo}>
-                  <Text style={styles.projectTitle}>Control de gastos</Text>
-                  <Text style={styles.projectSubtitle}>Seguimiento financiero con interfaz moderna y sencilla.</Text>
+                  <Text style={styles.projectTitle}>SuperMarket</Text>
+                  <Text style={styles.projectSubtitle}>Gestión de inventario, ventas y empleados con tecnologias como Jpa y Jwt.</Text>
                 </View>
                 <Text style={styles.projectArrow}>›</Text>
               </Pressable>
               <Pressable style={styles.projectItem}>
                 <View style={styles.projectImagePlaceholder}>
-                  <Image source={require('./assets/cg.png')} style={styles.projectImage} />
+                  <Image source={require('./assets/Icono World dance.png')} style={styles.projectImage} />
                 </View>
                 <View style={styles.projectInfo}>
-                  <Text style={styles.projectTitle}>Landing para app</Text>
-                  <Text style={styles.projectSubtitle}>Página de bienvenida con estilo minimalista y clara jerarquía.</Text>
+                  <Text style={styles.projectTitle}>Word dance</Text>
+                  <Text style={styles.projectSubtitle}>App web sobre eventos de danza con automatizaciones de procesos y servicio de streaming en vivo.</Text>
                 </View>
                 <Text style={styles.projectArrow}>›</Text>
               </Pressable>
@@ -49,7 +50,7 @@ export default function App() {
               <Text style={styles.sectionTitle}>Estudios</Text>
               <View style={styles.listItem}>
                 <Text style={styles.itemText}>
-                  Ingeniería de Sistemas · Certificación React Native · Talleres de UI/UX y desarrollo móvil.
+                  Estudiante actual de Ingeniería de Sistemas Y Tecnología en analisis y desarrollo de software.
                 </Text>
               </View>
             </View>
@@ -64,14 +65,14 @@ export default function App() {
 const styles = StyleSheet.create({
   appBackground: {
     flex: 1,
-    backgroundColor: '#0f172a',
+    backgroundColor: '#000000',
     alignItems: 'center',
     justifyContent: 'center',
   },
   phone: {
     width: 330,
     height: 640,
-    backgroundColor: '#152d4d',
+    backgroundColor: '#272727',
     borderRadius: 44,
     padding: 16,
     alignItems: 'center',
@@ -84,7 +85,7 @@ const styles = StyleSheet.create({
   notch: {
     width: 110,
     height: 8,
-    backgroundColor: '#1b3c6f',
+    backgroundColor: '#666666',
     borderRadius: 5,
     marginBottom: 14,
   },
@@ -105,17 +106,17 @@ const styles = StyleSheet.create({
     resizeMode: 'cover',
     borderRadius: 100,
     borderWidth: 3,
-    borderColor: '#dbe7fb',
+    borderColor: '#4c4d4e',
     marginBottom: 16,
   },
   name: {
-    color: '#102a43',
+    color: '#000000',
     fontSize: 22,
     fontWeight: '700',
     marginBottom: 4,
   },
   role: {
-    color: '#475569',
+    color: '#282829',
     fontSize: 14,
     marginBottom: 20,
   },
@@ -131,14 +132,14 @@ const styles = StyleSheet.create({
   },
   listItem: {
     width: '100%',
-    backgroundColor: '#e8effa',
+    backgroundColor: '#5a585a',
     borderRadius: 22,
     padding: 16,
-    borderWidth: 1,
-    borderColor: '#d6e4f2',
+    borderWidth: 2,
+    borderColor: '#000000',
   },
   itemText: {
-    color: '#334155',
+    color: '#ffffff',
     fontSize: 13,
     lineHeight: 20,
   },
@@ -146,12 +147,12 @@ const styles = StyleSheet.create({
     width: '100%',
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: '#ffffff',
+    backgroundColor: '#5a585a',
     borderRadius: 22,
     padding: 14,
     marginBottom: 12,
-    borderWidth: 1,
-    borderColor: '#dbe7fb',
+    borderWidth: 2,
+    borderColor: '#000000',
   },
   projectImagePlaceholder: {
     width: 60,
@@ -170,18 +171,18 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   projectTitle: {
-    color: '#102a43',
+    color: '#dfdada',
     fontSize: 15,
     fontWeight: '700',
     marginBottom: 4,
   },
   projectSubtitle: {
-    color: '#475569',
+    color: '#ffffff',
     fontSize: 13,
     lineHeight: 19,
   },
   projectArrow: {
-    color: '#2e4eb8',
+    color: '#080808',
     fontSize: 24,
     marginLeft: 8,
   },
