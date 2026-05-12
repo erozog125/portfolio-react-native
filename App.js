@@ -9,79 +9,103 @@ export default function App() {
   return (
     <View style={styles.appBackground}>
       <View style={styles.phone}>
-        <View style={styles.notch} />
+        <View style={styles.dynamicIsland} />
+
         <View style={styles.screen}>
           <ScrollView contentContainerStyle={styles.content} showsVerticalScrollIndicator={false}>
-            <Image source={require('./assets/FOTO.jpg')} style={styles.logo} />
-            <Text style={styles.name}>Krhistopher Marttyn Gallego Sanchez</Text>
-            <Text style={styles.role}>Tecnólogo en Análisis y Desarrollo de Software</Text>
+
+            {/* Header / Perfil */}
+            <View style={styles.headerCard}>
+              <Image source={require('./assets/Juan Jose Moreno Benavides.jpeg')} style={styles.avatar} />
+              <Text style={styles.name}>Juan José Moreno Benavides</Text>
+              <Text style={styles.role}>Tecnólogo en ADSO</Text>
+            </View>
+
+            {/* Sección: Sobre mí */}
             <View style={styles.section}>
               <Text style={styles.sectionTitle}>Sobre mí</Text>
-              <View style={styles.listItem}>
-                <Text style={styles.itemText}>
-                  Soy un desarrollador en formación apasionado por el desarrollo web y móvil,
-                  con conocimientos en frontend y backend. Me interesa crear aplicaciones
-                  funcionales y bien estructuradas. Tengo experiencia académica en desarrollo
-                  de sistemas y bases de datos.
+              <View style={styles.glassCard}>
+                <Text style={styles.aboutText}>
+                  Desarrollador apasionado por el ecosistema Full-stack. Enfocado en soluciones
+                  bien estructuradas con Java y React Native.
                 </Text>
               </View>
             </View>
 
+            {/* Habilidades */}
             <View style={styles.section}>
-              <Text style={styles.sectionTitle}>Habilidades Técnicas</Text>
-              <View style={styles.skillsContainer}>
-                <View style={styles.skillBadge}><Text style={styles.skillText}>Java</Text></View>
-                <View style={styles.skillBadge}><Text style={styles.skillText}>Spring Boot</Text></View>
-                <View style={styles.skillBadge}><Text style={styles.skillText}>TypeScript</Text></View>
-                <View style={styles.skillBadge}><Text style={styles.skillText}>JavaScript</Text></View>
-                <View style={styles.skillBadge}><Text style={styles.skillText}>HTML5/CSS3</Text></View>
-                <View style={styles.skillBadge}><Text style={styles.skillText}>MySQL</Text></View>
-                <View style={styles.skillBadge}><Text style={styles.skillText}>Git/GitHub</Text></View>
-                <View style={styles.skillBadge}><Text style={styles.skillText}>APIs REST</Text></View>
-                <View style={styles.skillBadge}><Text style={styles.skillText}>Postman</Text></View>
+              <Text style={styles.sectionTitle}>Habilidades</Text>
+              <View style={styles.skillsGrid}>
+                {['Spring Boot', 'Java', 'React Native', 'MySQL', 'Git', 'Docker'].map((skill) => (
+                  <View key={skill} style={styles.skillBadge}>
+                    <Text style={styles.skillText}>{skill}</Text>
+                  </View>
+                ))}
               </View>
             </View>
 
-            {/* Proyecto Destacado */}
+            {/* Sección: Proyectos */}
             <View style={styles.section}>
-              <Text style={styles.sectionTitle}>Proyecto Destacado</Text>
-              <Pressable style={styles.projectItem}>
-                <View style={styles.projectImagePlaceholder}>
-                  <Image source={require('./assets/image.png')} style={styles.projectImage} />
-                </View>
-                <View style={styles.projectInfo}>
+              <Text style={styles.sectionTitle}>Proyectos Destacados</Text>
+
+              {/* Proyecto 1: Pulse GYM */}
+              <Pressable style={[styles.projectCard, { marginBottom: 15 }]}>
+                <Image source={require('./assets/image.png')} style={styles.projectImage} />
+                <View style={styles.projectDetails}>
                   <Text style={styles.projectTitle}>Pulse GYM</Text>
-                  <Text style={styles.projectSubtitle}>
-                    Pulse GYM es una plataforma tecnológica integral para gimnasios que combina control de acceso biométrico con huella digital, inteligencia artificial para
-                    generación de rutinas personalizadas.
+                  <Text style={styles.projectSubtitle} numberOfLines={2}>
+                    Plataforma integral con biometría e IA para rutinas personalizadas.
                   </Text>
-                  <Text style={styles.projectTech}>
-                    Java 21 - Spring Boot - MySQL - Angular - Kotlin - Microservicios
-                  </Text>
+                  <View style={styles.tagContainer}>
+                    <Text style={styles.tagText}>Spring Boot • Java • MySQL</Text>
+                  </View>
                 </View>
-                <Text style={styles.projectArrow}>›</Text>
+              </Pressable>
+
+              {/* Proyecto 2: Karolpsia */}
+              <Pressable style={styles.projectCard}>
+                <Image source={require('./assets/logo empresa.png')} style={styles.projectImage} />
+                <View style={styles.projectDetails}>
+                  <Text style={styles.projectTitle}>Karolpsia</Text>
+                  <Text style={styles.projectSubtitle} numberOfLines={2}>
+                    Sitio web dedicado al mundo del maquillaje y la estética.
+                  </Text>
+                  {/* Tags separados para Karolpsia */}
+                  <View style={styles.separateTagsRow}>
+                    <View style={[styles.miniTag, { backgroundColor: '#E3F2FD' }]}>
+                      <Text style={[styles.tagText, { color: '#1976D2' }]}>HTML5</Text>
+                    </View>
+                    <View style={[styles.miniTag, { backgroundColor: '#E8F5E9' }]}>
+                      <Text style={[styles.tagText, { color: '#388E3C' }]}>CSS3</Text>
+                    </View>
+                    <View style={[styles.miniTag, { backgroundColor: '#FFF3E0' }]}>
+                      <Text style={[styles.tagText, { color: '#F57C00' }]}>JavaScript</Text>
+                    </View>
+                  </View>
+                </View>
               </Pressable>
             </View>
 
+            {/* Contacto */}
             <View style={styles.section}>
               <Text style={styles.sectionTitle}>Contacto</Text>
-              <Pressable style={styles.contactItem} onPress={() => openLink('krisgallego7@gmail.com')}>
-                <Image source={require('./assets/gmail.png')} style={styles.contactImage} />
-                <Text style={styles.contactText}>krisgallego7@gmail.com</Text>
-              </Pressable>
-              <Pressable style={styles.contactItem} onPress={() => openLink('https://github.com/krisgallego')}>
-                <Image source={require('./assets/github.png')} style={styles.contactImage} />
-                <Text style={styles.contactText}>GitHub: krisgallego</Text>
-              </Pressable>
-              <Pressable style={styles.contactItem} onPress={() => openLink('https://instagram.com/krhis_19x')}>
-                <Image source={require('./assets/instagram.png')} style={styles.contactImage} />
-                <Text style={styles.contactText}>Instagram: @krhis_19x</Text>
-              </Pressable>
+              <View style={styles.contactContainer}>
+                <Pressable style={styles.contactButton} onPress={() => openLink('mailto:juanjosemorenobenavides207@gmail.com')}>
+                  <Image source={require('./assets/gmail.png')} style={styles.contactIcon} />
+                </Pressable>
+                <Pressable style={styles.contactButton} onPress={() => openLink('https://github.com/juanmorenaso15')}>
+                  <Image source={require('./assets/github.png')} style={styles.contactIcon} />
+                </Pressable>
+                <Pressable style={styles.contactButton} onPress={() => openLink('https://instagram.com/juanmoreno0726')}>
+                  <Image source={require('./assets/instagram.png')} style={styles.contactIcon} />
+                </Pressable>
+              </View>
             </View>
+
           </ScrollView>
         </View>
       </View>
-      <StatusBar style="light" />
+      <StatusBar style="dark" />
     </View>
   );
 }
@@ -89,173 +113,182 @@ export default function App() {
 const styles = StyleSheet.create({
   appBackground: {
     flex: 1,
-    backgroundColor: '#0a0a0a',
+    backgroundColor: '#E3F2FD',
     alignItems: 'center',
     justifyContent: 'center',
   },
   phone: {
-    width: 330,
-    height: 640,
-    backgroundColor: '#1a1a1a',
-    borderRadius: 44,
-    padding: 16,
-    alignItems: 'center',
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 22 },
-    shadowOpacity: 0.5,
-    shadowRadius: 34,
-    elevation: 14,
+    width: 350,
+    height: 720,
+    backgroundColor: '#FFFFFF',
+    borderRadius: 50,
+    padding: 12,
+    shadowColor: '#90CAF9',
+    shadowOffset: { width: 0, height: 20 },
+    shadowOpacity: 0.3,
+    shadowRadius: 30,
+    elevation: 20,
   },
-  notch: {
-    width: 110,
-    height: 8,
-    backgroundColor: '#2a2a2a',
-    borderRadius: 5,
-    marginBottom: 14,
+  dynamicIsland: {
+    width: 100,
+    height: 25,
+    backgroundColor: '#1E293B',
+    borderRadius: 20,
+    alignSelf: 'center',
+    marginTop: 10,
+    marginBottom: 15,
   },
   screen: {
     flex: 1,
-    width: '100%',
-    backgroundColor: '#121212',
-    borderRadius: 32,
-    padding: 20,
+    backgroundColor: '#F8FBFF',
+    borderRadius: 38,
+    overflow: 'hidden',
   },
   content: {
+    padding: 20,
     alignItems: 'center',
-    paddingBottom: 24,
   },
-  logo: {
-    width: 140,
-    height: 140,
-    resizeMode: 'cover',
-    borderRadius: 100,
-    borderWidth: 3,
-    borderColor: '#00b4d8',
-    marginBottom: 16,
+  headerCard: {
+    alignItems: 'center',
+    marginBottom: 25,
+  },
+  avatar: {
+    width: 110,
+    height: 110,
+    borderRadius: 55,
+    borderWidth: 4,
+    borderColor: '#BBDEFB',
+    marginBottom: 12,
   },
   name: {
-    color: '#ffffff',
     fontSize: 20,
-    fontWeight: '700',
-    marginBottom: 4,
+    fontWeight: '800',
+    color: '#1A237E',
     textAlign: 'center',
   },
   role: {
-    color: '#00b4d8',
-    fontSize: 13,
-    marginBottom: 20,
-    textAlign: 'center',
+    fontSize: 14,
+    color: '#64B5F6',
+    fontWeight: '600',
+    marginTop: 2,
   },
   section: {
     width: '100%',
-    marginBottom: 18,
+    marginBottom: 22,
   },
   sectionTitle: {
-    color: '#00f5d4',
-    fontSize: 16,
+    fontSize: 15,
     fontWeight: '700',
+    color: '#283593',
     marginBottom: 10,
+    paddingLeft: 5,
   },
-  listItem: {
-    width: '100%',
-    backgroundColor: '#1e1e1e',
-    borderRadius: 22,
+  glassCard: {
+    backgroundColor: '#FFFFFF',
+    borderRadius: 20,
     padding: 16,
-    borderWidth: 1,
-    borderColor: '#2a2a2a',
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.05,
+    shadowRadius: 10,
   },
-  itemText: {
-    color: '#a0a0a0',
+  aboutText: {
+    color: '#546E7A',
     fontSize: 13,
     lineHeight: 20,
   },
-  skillsContainer: {
+  skillsGrid: {
     flexDirection: 'row',
     flexWrap: 'wrap',
     gap: 8,
   },
   skillBadge: {
-    backgroundColor: '#1e1e1e',
+    backgroundColor: '#E1F5FE',
+    paddingHorizontal: 14,
+    paddingVertical: 8,
+    borderRadius: 12,
     borderWidth: 1,
-    borderColor: '#00b4d8',
-    borderRadius: 20,
-    paddingHorizontal: 12,
-    paddingVertical: 6,
-    marginRight: 8,
-    marginBottom: 8,
+    borderColor: '#B3E5FC',
   },
   skillText: {
-    color: '#00b4d8',
-    fontSize: 11,
-    fontWeight: '500',
+    color: '#0288D1',
+    fontSize: 12,
+    fontWeight: '600',
   },
-  projectItem: {
-    width: '100%',
-    flexDirection: 'row',
-    alignItems: 'center',
-    backgroundColor: '#1e1e1e',
+  projectCard: {
+    backgroundColor: '#FFFFFF',
     borderRadius: 22,
-    padding: 14,
-    marginBottom: 12,
+    flexDirection: 'row',
+    padding: 12,
+    alignItems: 'center',
     borderWidth: 1,
-    borderColor: '#2a2a2a',
-  },
-  projectImagePlaceholder: {
-    width: 60,
-    height: 60,
-    borderRadius: 18,
-    marginRight: 12,
-    marginLeft: 4,
+    borderColor: '#E3F2FD',
   },
   projectImage: {
-    width: 60,
-    height: 60,
-    resizeMode: 'contain',
-    borderRadius: 18,
+    width: 70,
+    height: 70,
+    borderRadius: 15,
+    backgroundColor: '#E3F2FD',
   },
-  projectInfo: {
+
+  
+  projectDetails: {
     flex: 1,
+    marginLeft: 15,
   },
   projectTitle: {
-    color: '#ffffff',
     fontSize: 15,
     fontWeight: '700',
-    marginBottom: 4,
+    color: '#1A237E',
   },
   projectSubtitle: {
-    color: '#a0a0a0',
     fontSize: 11,
-    lineHeight: 16,
+    color: '#78909C',
+    marginTop: 2,
   },
-  projectTech: {
-    color: '#00b4d8',
-    fontSize: 9,
-    marginTop: 4,
+  tagContainer: {
+    marginTop: 8,
+    backgroundColor: '#E8EAF6',
+    alignSelf: 'flex-start',
+    paddingHorizontal: 8,
+    paddingVertical: 3,
+    borderRadius: 8,
   },
-  projectArrow: {
-    color: '#00f5d4',
-    fontSize: 24,
-    marginLeft: 8,
-  },
-  contactItem: {
-    width: '100%',
+  separateTagsRow: {
     flexDirection: 'row',
+    marginTop: 8,
+    gap: 5,
+  },
+  miniTag: {
+    paddingHorizontal: 8,
+    paddingVertical: 3,
+    borderRadius: 6,
+  },
+  tagText: {
+    fontSize: 10,
+    fontWeight: '700',
+  },
+  contactContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    marginTop: 5,
+  },
+  contactButton: {
+    backgroundColor: '#FFFFFF',
+    width: 50,
+    height: 50,
+    borderRadius: 15,
+    justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#1e1e1e',
-    borderRadius: 22,
-    padding: 12,
-    marginBottom: 10,
-    borderWidth: 1,
-    borderColor: '#2a2a2a',
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.1,
+    shadowRadius: 8,
+    elevation: 3,
   },
-  contactImage: {
-    width: 24,
-    height: 24,
-    marginRight: 12,
-  },
-  contactText: {
-    color: '#a0a0a0',
-    fontSize: 13,
-    flex: 1,
+  contactIcon: {
+    width: 26,
+    height: 26,
+    resizeMode: 'contain',
   },
 });
