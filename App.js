@@ -8,15 +8,15 @@ export default function App() {
         <View style={styles.notch} />
         <View style={styles.screen}>
           <ScrollView contentContainerStyle={styles.content} showsVerticalScrollIndicator={false}>
-            <Image source={require('./assets/profile.png')} style={styles.logo} />
-            <Text style={styles.name}>Edwin Rozo Gómez</Text>
-            <Text style={styles.role}>Desarrollador React Native</Text>
+            <Image source={require('./assets/foto mia.jpg')} style={styles.logo} />
+            <Text style={styles.name}>Jeidy Alexandra Cordoba Gómez</Text>
+            <Text style={styles.role}>Analisis y Desarollo de Software</Text>
 
             <View style={styles.section}>
               <Text style={styles.sectionTitle}>Acerca de mí</Text>
               <View style={styles.listItem}>
                 <Text style={styles.itemText}>
-                  Diseñador de experiencias móviles con enfoque minimalista. Me apasiona crear apps claras, funcionales y con una paleta azul-gris que transmite profesionalismo.
+                Estudio en el SENA en el área de análisis y desarrollo de software. Me considero una persona responsable, creativa y con muchas ganas de aprender. Me gusta la tecnología, la programación y seguir mejorando mis habilidades para crecer profesionalmente.
                 </Text>
               </View>
             </View>
@@ -25,21 +25,21 @@ export default function App() {
               <Text style={styles.sectionTitle}>Proyectos</Text>
               <Pressable style={styles.projectItem}>
                 <View style={styles.projectImagePlaceholder}>
-                  <Image source={require('./assets/PA.png')} style={styles.projectImage} />
+                  <Image source={require('./assets/LogoEduplanner.jpeg')} style={styles.projectImage} />
                 </View>
                 <View style={styles.projectInfo}>
-                  <Text style={styles.projectTitle}>Control de gastos</Text>
-                  <Text style={styles.projectSubtitle}>Seguimiento financiero con interfaz moderna y sencilla.</Text>
+                  <Text style={styles.projectTitle}>EduPlanner</Text>
+                  <Text style={styles.projectSubtitle}>Sistema para instituciones</Text>
                 </View>
                 <Text style={styles.projectArrow}>›</Text>
               </Pressable>
               <Pressable style={styles.projectItem}>
                 <View style={styles.projectImagePlaceholder}>
-                  <Image source={require('./assets/cg.png')} style={styles.projectImage} />
+                  <Image source={require('./assets/Velvet Aromas Logo.png')} style={styles.projectImage} />
                 </View>
                 <View style={styles.projectInfo}>
-                  <Text style={styles.projectTitle}>Landing para app</Text>
-                  <Text style={styles.projectSubtitle}>Página de bienvenida con estilo minimalista y clara jerarquía.</Text>
+                  <Text style={styles.projectTitle}>Velvet Aromas</Text>
+                  <Text style={styles.projectSubtitle}>Página de venta de velas aromaticas personalizadas</Text>
                 </View>
                 <Text style={styles.projectArrow}>›</Text>
               </Pressable>
@@ -49,7 +49,7 @@ export default function App() {
               <Text style={styles.sectionTitle}>Estudios</Text>
               <View style={styles.listItem}>
                 <Text style={styles.itemText}>
-                  Ingeniería de Sistemas · Certificación React Native · Talleres de UI/UX y desarrollo móvil.
+                  Tecnico en programacion de software, bachillerato y Primeros Auxilios
                 </Text>
               </View>
             </View>
@@ -64,14 +64,14 @@ export default function App() {
 const styles = StyleSheet.create({
   appBackground: {
     flex: 1,
-    backgroundColor: '#0f172a',
+    backgroundColor: '#F7CFD8',
     alignItems: 'center',
     justifyContent: 'center',
   },
   phone: {
     width: 330,
     height: 640,
-    backgroundColor: '#152d4d',
+    backgroundColor: '#F4A6C1',
     borderRadius: 44,
     padding: 16,
     alignItems: 'center',
@@ -82,16 +82,16 @@ const styles = StyleSheet.create({
     elevation: 14,
   },
   notch: {
-    width: 110,
+    width: 30,
     height: 8,
-    backgroundColor: '#1b3c6f',
-    borderRadius: 5,
+    backgroundColor: '#FFF5F7',
+    borderRadius: 4,
     marginBottom: 14,
   },
   screen: {
     flex: 1,
     width: '100%',
-    backgroundColor: '#f4f7fb',
+    backgroundColor: '#FFDEE9',
     borderRadius: 32,
     padding: 20,
   },
@@ -131,7 +131,7 @@ const styles = StyleSheet.create({
   },
   listItem: {
     width: '100%',
-    backgroundColor: '#e8effa',
+    backgroundColor: '#FFF5F7',
     borderRadius: 22,
     padding: 16,
     borderWidth: 1,
