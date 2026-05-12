@@ -64,14 +64,15 @@ export default function App() {
 const styles = StyleSheet.create({
   appBackground: {
     flex: 1,
-    backgroundColor: '#0f172a',
+    backgroundImage: 'url()' ,
+    backgroundColor: '#7bff00',
     alignItems: 'center',
     justifyContent: 'center',
   },
   phone: {
     width: 330,
     height: 640,
-    backgroundColor: '#152d4d',
+    backgroundColor: '#000000',
     borderRadius: 44,
     padding: 16,
     alignItems: 'center',
@@ -84,7 +85,7 @@ const styles = StyleSheet.create({
   notch: {
     width: 110,
     height: 8,
-    backgroundColor: '#1b3c6f',
+    backgroundColor: '#4b4b4b',
     borderRadius: 5,
     marginBottom: 14,
   },
