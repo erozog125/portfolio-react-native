@@ -8,15 +8,15 @@ export default function App() {
         <View style={styles.notch} />
         <View style={styles.screen}>
           <ScrollView contentContainerStyle={styles.content} showsVerticalScrollIndicator={false}>
-            <Image source={require('./assets/profile.png')} style={styles.logo} />
-            <Text style={styles.name}>Edwin Rozo Gómez</Text>
-            <Text style={styles.role}>Desarrollador React Native</Text>
+            <Image source={require('./assets/FtoPerfil.jpeg')} style={styles.logo} />
+            <Text style={styles.name}>Juan Diego Londoño</Text>
+            <Text style={styles.role}>Desarrollador Web | Full Stack.</Text>
 
             <View style={styles.section}>
               <Text style={styles.sectionTitle}>Acerca de mí</Text>
               <View style={styles.listItem}>
                 <Text style={styles.itemText}>
-                  Diseñador de experiencias móviles con enfoque minimalista. Me apasiona crear apps claras, funcionales y con una paleta azul-gris que transmite profesionalismo.
+                  En proceso de formacion como analista y desarrollador de software, con experiencia en proyectos personales y colaborativos. Apasionado por la tecnología y el desarrollo de soluciones innovadoras.
                 </Text>
               </View>
             </View>
@@ -25,21 +25,21 @@ export default function App() {
               <Text style={styles.sectionTitle}>Proyectos</Text>
               <Pressable style={styles.projectItem}>
                 <View style={styles.projectImagePlaceholder}>
-                  <Image source={require('./assets/PA.png')} style={styles.projectImage} />
+                  <Image source={require('./assets/ImgSM.jpg')} style={styles.projectImage} />
                 </View>
                 <View style={styles.projectInfo}>
-                  <Text style={styles.projectTitle}>Control de gastos</Text>
-                  <Text style={styles.projectSubtitle}>Seguimiento financiero con interfaz moderna y sencilla.</Text>
+                  <Text style={styles.projectTitle}>Supermarket</Text>
+                  <Text style={styles.projectSubtitle}>Proyecto sobre gestion de inventario y demas funcionalidades.</Text>
                 </View>
                 <Text style={styles.projectArrow}>›</Text>
               </Pressable>
               <Pressable style={styles.projectItem}>
                 <View style={styles.projectImagePlaceholder}>
-                  <Image source={require('./assets/cg.png')} style={styles.projectImage} />
+                  <Image source={require('./assets/ImgWD.jpeg')} style={styles.projectImage} />
                 </View>
                 <View style={styles.projectInfo}>
-                  <Text style={styles.projectTitle}>Landing para app</Text>
-                  <Text style={styles.projectSubtitle}>Página de bienvenida con estilo minimalista y clara jerarquía.</Text>
+                  <Text style={styles.projectTitle}>World Dance</Text>
+                  <Text style={styles.projectSubtitle}>Aplicacion web el cual participo como desarrollador, consiste en automatizacion de eventos de danza.</Text>
                 </View>
                 <Text style={styles.projectArrow}>›</Text>
               </Pressable>
@@ -49,7 +49,7 @@ export default function App() {
               <Text style={styles.sectionTitle}>Estudios</Text>
               <View style={styles.listItem}>
                 <Text style={styles.itemText}>
-                  Ingeniería de Sistemas · Certificación React Native · Talleres de UI/UX y desarrollo móvil.
+                  Aprendiz SENA (2025-2026). Formación en desarrollo de software, programación y análisis de sistemas.
                 </Text>
               </View>
             </View>
@@ -91,7 +91,7 @@ const styles = StyleSheet.create({
   screen: {
     flex: 1,
     width: '100%',
-    backgroundColor: '#f4f7fb',
+    backgroundColor: '#ffffff',
     borderRadius: 32,
     padding: 20,
   },
@@ -105,7 +105,7 @@ const styles = StyleSheet.create({
     resizeMode: 'cover',
     borderRadius: 100,
     borderWidth: 3,
-    borderColor: '#dbe7fb',
+    borderColor: '#47808f',
     marginBottom: 16,
   },
   name: {
@@ -131,14 +131,14 @@ const styles = StyleSheet.create({
   },
   listItem: {
     width: '100%',
-    backgroundColor: '#e8effa',
+    backgroundColor: '#20437c',
     borderRadius: 22,
     padding: 16,
     borderWidth: 1,
     borderColor: '#d6e4f2',
   },
   itemText: {
-    color: '#334155',
+    color: '#ffffff',
     fontSize: 13,
     lineHeight: 20,
   },
@@ -146,7 +146,7 @@ const styles = StyleSheet.create({
     width: '100%',
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: '#ffffff',
+    backgroundColor: '#4b4646',
     borderRadius: 22,
     padding: 14,
     marginBottom: 12,
@@ -170,13 +170,13 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   projectTitle: {
-    color: '#102a43',
+    color: '#d3d3d3',
     fontSize: 15,
     fontWeight: '700',
     marginBottom: 4,
   },
   projectSubtitle: {
-    color: '#475569',
+    color: '#ffffff',
     fontSize: 13,
     lineHeight: 19,
   },
