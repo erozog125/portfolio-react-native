@@ -8,38 +8,38 @@ export default function App() {
         <View style={styles.notch} />
         <View style={styles.screen}>
           <ScrollView contentContainerStyle={styles.content} showsVerticalScrollIndicator={false}>
-            <Image source={require('./assets/profile.png')} style={styles.logo} />
-            <Text style={styles.name}>Edwin Rozo Gómez</Text>
-            <Text style={styles.role}>Desarrollador React Native</Text>
+            <Image source={require('./assets/image.png')} style={styles.logo} />
+            <Text style={styles.name}>Ricardo Molina</Text>
+            <Text style={styles.role}>Aprendiz de Todo, Experto en Nada</Text>
 
             <View style={styles.section}>
-              <Text style={styles.sectionTitle}>Acerca de mí</Text>
+              <Text style={styles.sectionTitle}>About Me</Text>
               <View style={styles.listItem}>
                 <Text style={styles.itemText}>
-                  Diseñador de experiencias móviles con enfoque minimalista. Me apasiona crear apps claras, funcionales y con una paleta azul-gris que transmite profesionalismo.
+                  Aprendiz de ADSO con conocimientos básicos para las soluciones digitales.
                 </Text>
               </View>
             </View>
 
             <View style={styles.section}>
-              <Text style={styles.sectionTitle}>Proyectos</Text>
+              <Text style={styles.sectionTitle}>My Work</Text>
               <Pressable style={styles.projectItem}>
                 <View style={styles.projectImagePlaceholder}>
-                  <Image source={require('./assets/PA.png')} style={styles.projectImage} />
+                  <Image source={require('./assets/M.png')} style={styles.projectImage} />
                 </View>
                 <View style={styles.projectInfo}>
-                  <Text style={styles.projectTitle}>Control de gastos</Text>
-                  <Text style={styles.projectSubtitle}>Seguimiento financiero con interfaz moderna y sencilla.</Text>
+                  <Text style={styles.projectTitle}>Morfik</Text>
+                  <Text style={styles.projectSubtitle}>Plataforma E-commerce para emprendedores Colombianos.</Text>
                 </View>
                 <Text style={styles.projectArrow}>›</Text>
               </Pressable>
               <Pressable style={styles.projectItem}>
                 <View style={styles.projectImagePlaceholder}>
-                  <Image source={require('./assets/cg.png')} style={styles.projectImage} />
+                  <Image source={require('./assets/Pulsegym.png')} style={styles.projectImage} />
                 </View>
                 <View style={styles.projectInfo}>
-                  <Text style={styles.projectTitle}>Landing para app</Text>
-                  <Text style={styles.projectSubtitle}>Página de bienvenida con estilo minimalista y clara jerarquía.</Text>
+                  <Text style={styles.projectTitle}>Pulse GYM</Text>
+                  <Text style={styles.projectSubtitle}>Software para Gestión de Gimnasios.</Text>
                 </View>
                 <Text style={styles.projectArrow}>›</Text>
               </Pressable>
@@ -49,10 +49,36 @@ export default function App() {
               <Text style={styles.sectionTitle}>Estudios</Text>
               <View style={styles.listItem}>
                 <Text style={styles.itemText}>
-                  Ingeniería de Sistemas · Certificación React Native · Talleres de UI/UX y desarrollo móvil.
+                  Técnico en Desarrollo de Software en el SENA
                 </Text>
               </View>
             </View>
+
+            <View style={styles.section}>
+              <Text style={styles.sectionTitle}>Strengths</Text>
+              <View style={styles.section2}>
+                <Text>Trabajo en Equipo</Text>
+                <Text>⭐️⭐️⭐️</Text>
+              </View>
+              <View style={styles.section2}>
+                <Text>Activo</Text>
+                <Text>⭐️⭐️⭐️⭐️</Text>
+              </View>
+              <View style={styles.section2}>
+                <Text>Brat</Text>
+                <Text>⭐️⭐️⭐️⭐️⭐️</Text>
+              </View>
+              <View style={styles.section2}>
+                <Text>Creatividad</Text>
+                <Text>⭐️⭐️⭐️⭐️⭐️</Text>
+              </View>
+              <View style={styles.section2}>
+                <Text>Liderazgo</Text>
+                <Text>⭐️⭐️⭐️⭐️⭐️</Text>
+              </View>
+            </View>
+
+
           </ScrollView>
         </View>
       </View>
@@ -64,7 +90,7 @@ export default function App() {
 const styles = StyleSheet.create({
   appBackground: {
     flex: 1,
-    backgroundImage: 'url()' ,
+    backgroundImage: 'url()',
     backgroundColor: '#7bff00',
     alignItems: 'center',
     justifyContent: 'center',
@@ -106,7 +132,7 @@ const styles = StyleSheet.create({
     resizeMode: 'cover',
     borderRadius: 100,
     borderWidth: 3,
-    borderColor: '#dbe7fb',
+    borderColor: '#37ff0077',
     marginBottom: 16,
   },
   name: {
@@ -132,11 +158,11 @@ const styles = StyleSheet.create({
   },
   listItem: {
     width: '100%',
-    backgroundColor: '#e8effa',
+    backgroundColor: '#7efd0061',
     borderRadius: 22,
     padding: 16,
     borderWidth: 1,
-    borderColor: '#d6e4f2',
+    borderColor: '#37ff0077',
   },
   itemText: {
     color: '#334155',
@@ -152,7 +178,7 @@ const styles = StyleSheet.create({
     padding: 14,
     marginBottom: 12,
     borderWidth: 1,
-    borderColor: '#dbe7fb',
+    borderColor: '#37ff0077',
   },
   projectImagePlaceholder: {
     width: 60,
@@ -165,7 +191,7 @@ const styles = StyleSheet.create({
     width: 60,
     height: 60,
     resizeMode: 'contain',
-    borderRadius: 18,
+    borderRadius: 6,
   },
   projectInfo: {
     flex: 1,
@@ -186,4 +212,8 @@ const styles = StyleSheet.create({
     fontSize: 24,
     marginLeft: 8,
   },
+  section2: {
+    flexDirection: 'row',
+    justifyContent: 'space-between'
+  }
 });
