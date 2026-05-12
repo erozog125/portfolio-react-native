@@ -84,7 +84,7 @@ const styles = StyleSheet.create({
   notch: {
     width: 110,
     height: 8,
-    backgroundColor: '#a6d4b9',
+    backgroundColor: '#b0e1c4',
     borderRadius: 5,
     marginBottom: 14,
   },
