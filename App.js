@@ -4,8 +4,10 @@ import {
   View,
   Text,
   Image,
+  Pressable,
   StyleSheet,
 } from 'react-native';
+import { StatusBar } from 'expo-status-bar';
 
 export default function App() {
   return (
@@ -14,76 +16,68 @@ export default function App() {
         contentContainerStyle={styles.scrollContent}
         showsVerticalScrollIndicator={false}
       >
-        <View style={[styles.card, styles.heroCard]}>
-          <Image
-            source={{ uri: 'https://picsum.photos/id/1027/400/400' }}
-            style={styles.avatar}
-          />
-          <Text style={styles.name}>José Lemus</Text>
-          <Text style={styles.role}>
-            Desarrollador de aplicaciones móvil con React Native
-          </Text>
-        </View>
+        <View style={styles.phoneShell}>
+          <View style={styles.phoneScreen}>
+            <View style={styles.notch} />
 
-        <View style={styles.card}>
-          <Text style={styles.cardTitle}>Acerca de mí</Text>
-          <Text style={styles.body}>
-            Me gusta crear apps claras y útiles para Android, iOS y web. Trabajo
-            con Expo y React Native, aprendo rápido y disfruto mejorar la
-            experiencia del usuario en cada pantalla.
-          </Text>
-        </View>
+            <View style={styles.hero}>
+              <Image
+                source={{
+                  uri: 'https://randomuser.me/api/portraits/men/1.jpg',
+                }}
+                style={styles.avatar}
+              />
+              <Text style={styles.title}>José Lemus</Text>
+              <Text style={styles.role}>Desarrollador de software</Text>
+            </View>
 
-        <View style={styles.projectsSection}>
-          <Text style={styles.sectionTitle}>Proyectos</Text>
+            <View style={styles.section}>
+              <Text style={styles.sectionHeading}>Acerca de mí</Text>
+              <View style={styles.aboutPanel}>
+                <Text style={styles.description}>
+                  Estudiante de desarrollo de software enfocado en backend.
+                </Text>
+              </View>
+            </View>
 
-          <View style={styles.card}>
-            <Image
-              source={{ uri: 'https://picsum.photos/300' }}
-              style={styles.projectImage}
-            />
-            <Text style={styles.projectTitle}>Control de gastos personales</Text>
-            <Text style={styles.projectDescription}>
-              App para registrar ingresos y gastos, con resumen por categoría y
-              recordatorios básicos.
-            </Text>
-          </View>
-
-          <View style={styles.card}>
-            <Image
-              source={{ uri: 'https://picsum.photos/300' }}
-              style={styles.projectImage}
-            />
-            <Text style={styles.projectTitle}>Lista de tareas offline</Text>
-            <Text style={styles.projectDescription}>
-              Gestión de pendientes sincronizada localmente, con filtros por
-              prioridad y fecha.
-            </Text>
-          </View>
-
-          <View style={styles.card}>
-            <Image
-              source={{ uri: 'https://picsum.photos/300' }}
-              style={styles.projectImage}
-            />
-            <Text style={styles.projectTitle}>Explorador de clima urbano</Text>
-            <Text style={styles.projectDescription}>
-              Vista del clima por barrio usando datos públicos y favoritos
-              guardados en el dispositivo.
-            </Text>
+            <View style={styles.section}>
+              <Text style={styles.sectionHeading}>Proyectos</Text>
+              <Pressable
+                style={({ pressed }) => [
+                  styles.projectCard,
+                  pressed && styles.projectCardPressed,
+                ]}
+                onPress={() => console.log('INKLUSPORT')}
+              >
+                <Image
+                  source={{
+                    uri: 'https://picsum.photos/seed/inklusport/120/120',
+                  }}
+                  style={styles.projectThumb}
+                />
+                <View style={styles.projectBody}>
+                  <Text style={styles.projectTitle}>INKLUSPORT</Text>
+                  <Text style={styles.projectDescription}>
+                    Plataforma de gestión para deportes inclusivos.
+                  </Text>
+                </View>
+                <Text style={styles.chevron}>›</Text>
+              </Pressable>
+            </View>
           </View>
         </View>
       </ScrollView>
+      <StatusBar style="dark" />
     </SafeAreaView>
   );
 }
 
-const softShadow = {
-  shadowColor: '#000',
-  shadowOffset: { width: 0, height: 4 },
-  shadowOpacity: 0.08,
-  shadowRadius: 14,
-  elevation: 4,
+const shellShadow = {
+  shadowColor: '#1f2937',
+  shadowOffset: { width: 0, height: 16 },
+  shadowOpacity: 0.18,
+  shadowRadius: 28,
+  elevation: 14,
 };
 
 const styles = StyleSheet.create({
@@ -92,70 +86,142 @@ const styles = StyleSheet.create({
     backgroundColor: '#F5F7FA',
   },
   scrollContent: {
-    padding: 20,
-    paddingBottom: 32,
-    gap: 20,
-  },
-  card: {
-    backgroundColor: '#FFFFFF',
-    borderRadius: 16,
-    padding: 20,
-    gap: 12,
-    ...softShadow,
-  },
-  heroCard: {
+    flexGrow: 1,
     alignItems: 'center',
+    paddingHorizontal: 20,
+    paddingVertical: 28,
+    paddingBottom: 40,
   },
-  avatar: {
-    width: 120,
-    height: 120,
-    borderRadius: 60,
+  phoneShell: {
+    width: '100%',
+    maxWidth: 380,
+    borderRadius: 46,
+    borderWidth: 14,
+    borderColor: '#db2777',
+    padding: 12,
+    backgroundColor: '#fce7f3',
+    ...shellShadow,
   },
-  name: {
-    fontSize: 24,
-    fontWeight: '700',
-    color: '#111827',
-    textAlign: 'center',
+  phoneScreen: {
+    borderRadius: 38,
+    backgroundColor: '#FFFFFF',
+    paddingHorizontal: 22,
+    paddingTop: 18,
+    paddingBottom: 26,
+    gap: 22,
   },
-  role: {
-    fontSize: 15,
-    color: '#6B7280',
-    lineHeight: 22,
-    textAlign: 'center',
-  },
-  cardTitle: {
-    fontSize: 18,
-    fontWeight: '700',
-    color: '#111827',
-  },
-  body: {
-    fontSize: 15,
-    color: '#4B5563',
-    lineHeight: 24,
-  },
-  projectsSection: {
-    gap: 16,
-  },
-  sectionTitle: {
-    fontSize: 20,
-    fontWeight: '700',
-    color: '#111827',
+  notch: {
+    alignSelf: 'center',
+    width: 112,
+    height: 8,
+    borderRadius: 999,
+    backgroundColor: '#f1f5f9',
     marginBottom: 4,
   },
-  projectImage: {
+  hero: {
+    alignItems: 'center',
+    gap: 12,
+    paddingTop: 8,
+    paddingBottom: 4,
+  },
+  avatar: {
+    width: 118,
+    height: 118,
+    borderRadius: 59,
+    borderWidth: 4,
+    borderColor: '#FFFFFF',
+    shadowColor: '#db2777',
+    shadowOffset: { width: 0, height: 8 },
+    shadowOpacity: 0.22,
+    shadowRadius: 14,
+    elevation: 10,
+  },
+  title: {
+    fontSize: 24,
+    fontWeight: '700',
+    color: '#9d174d',
+    textAlign: 'center',
+    letterSpacing: -0.4,
+  },
+  role: {
+    fontSize: 18,
+    fontWeight: '500',
+    color: '#64748b',
+    textAlign: 'center',
+    lineHeight: 24,
+    paddingHorizontal: 12,
+  },
+  section: {
+    gap: 12,
     width: '100%',
-    height: 160,
-    borderRadius: 12,
-    backgroundColor: '#E5E7EB',
+  },
+  sectionHeading: {
+    fontSize: 18,
+    fontWeight: '700',
+    color: '#9d174d',
+    letterSpacing: -0.2,
+  },
+  aboutPanel: {
+    backgroundColor: '#fdf2f8',
+    borderRadius: 20,
+    padding: 18,
+    borderWidth: 1,
+    borderColor: '#fbcfe8',
+  },
+  description: {
+    fontSize: 14,
+    fontWeight: '400',
+    color: '#475569',
+    lineHeight: 21,
+  },
+  projectCard: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 14,
+    paddingVertical: 14,
+    paddingHorizontal: 14,
+    borderRadius: 20,
+    backgroundColor: '#FFFFFF',
+    borderWidth: 2,
+    borderColor: '#db2777',
+    shadowColor: '#9f1239',
+    shadowOffset: { width: 0, height: 6 },
+    shadowOpacity: 0.08,
+    shadowRadius: 12,
+    elevation: 4,
+  },
+  projectCardPressed: {
+    opacity: 0.92,
+    transform: [{ scale: 0.992 }],
+  },
+  projectThumb: {
+    width: 58,
+    height: 58,
+    borderRadius: 14,
+    backgroundColor: '#fce7f3',
+  },
+  projectBody: {
+    flex: 1,
+    gap: 6,
+    minWidth: 0,
   },
   projectTitle: {
-    fontSize: 17,
+    fontSize: 18,
     fontWeight: '700',
-    color: '#1F2937',
+    color: '#9d174d',
+    letterSpacing: -0.2,
   },
   projectDescription: {
     fontSize: 14,
-    color: '#6B7280',
-    lineHeight: 21,
+    fontWeight: '400',
+    color: '#64748b',
+    lineHeight: 20,
+  },
+  chevron: {
+    fontSize: 26,
+    fontWeight: '600',
+    color: '#db2777',
+    paddingLeft: 4,
+    marginTop: -2,
   },
 });
