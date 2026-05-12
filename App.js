@@ -1,7 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image, ScrollView, Pressable } from 'react-native';
+import { StyleSheet, Text, View, Image, ScrollView, Pressable, Linking } from 'react-native';
 
 export default function App() {
+  const openLink = (url) => {
+    Linking.openURL(url);
+  };
+
   return (
     <View style={styles.appBackground}>
       <View style={styles.phone}>
@@ -13,7 +17,7 @@ export default function App() {
             <Text style={styles.role}>Estudiante de Análisis y Desarrollo de Software</Text>
 
             <View style={styles.section}>
-              <Text style={styles.sectionTitle}>Acerca de mí</Text>
+              <Text style={styles.sectionTitle}>Sobre mí</Text>
               <View style={styles.listItem}>
                 <Text style={styles.itemText}>
                   Estoy en mi último año de carrera, apasionada por el desarrollo web de las páginas y el desarrollo. Me gusta aprender cosas nuevas y enfrentar desafíos que me permitan crecer profesionalmente. Mi objetivo es convertirme en una desarrolladora web full stack, creando experiencias digitales innovadoras y eficientes.
@@ -77,7 +81,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     shadowColor: '#000000',
     shadowOffset: { width: 0, height: 22 },
-    shadowOpacity: 0.28,
+    shadowOpacity: 0.5,
     shadowRadius: 34,
     elevation: 14,
   },
@@ -113,11 +117,13 @@ const styles = StyleSheet.create({
     fontSize: 22,
     fontWeight: '700',
     marginBottom: 4,
+    textAlign: 'center',
   },
   role: {
     color: '#000000',
     fontSize: 14,
     marginBottom: 20,
+    textAlign: 'center',
   },
   section: {
     width: '100%',
@@ -138,9 +144,29 @@ const styles = StyleSheet.create({
     borderColor: '#9d9d9d',
   },
   itemText: {
-    color: '#334155',
+    color: '#a0a0a0',
     fontSize: 13,
     lineHeight: 20,
+  },
+  skillsContainer: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    gap: 8,
+  },
+  skillBadge: {
+    backgroundColor: '#1e1e1e',
+    borderWidth: 1,
+    borderColor: '#00b4d8',
+    borderRadius: 20,
+    paddingHorizontal: 12,
+    paddingVertical: 6,
+    marginRight: 8,
+    marginBottom: 8,
+  },
+  skillText: {
+    color: '#00b4d8',
+    fontSize: 11,
+    fontWeight: '500',
   },
   projectItem: {
     width: '100%',
@@ -170,19 +196,45 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   projectTitle: {
-    color: '#102a43',
+    color: '#ffffff',
     fontSize: 15,
     fontWeight: '700',
     marginBottom: 4,
   },
   projectSubtitle: {
-    color: '#475569',
-    fontSize: 13,
-    lineHeight: 19,
+    color: '#a0a0a0',
+    fontSize: 11,
+    lineHeight: 16,
+  },
+  projectTech: {
+    color: '#00b4d8',
+    fontSize: 9,
+    marginTop: 4,
   },
   projectArrow: {
     color: '#2eb871',
     fontSize: 24,
     marginLeft: 8,
+  },
+  contactItem: {
+    width: '100%',
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: '#1e1e1e',
+    borderRadius: 22,
+    padding: 12,
+    marginBottom: 10,
+    borderWidth: 1,
+    borderColor: '#2a2a2a',
+  },
+  contactImage: {
+    width: 24,
+    height: 24,
+    marginRight: 12,
+  },
+  contactText: {
+    color: '#a0a0a0',
+    fontSize: 13,
+    flex: 1,
   },
 });
