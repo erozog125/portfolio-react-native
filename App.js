@@ -12,70 +12,136 @@ export default function App() {
         <View style={styles.notch} />
         <View style={styles.screen}>
           <ScrollView contentContainerStyle={styles.content} showsVerticalScrollIndicator={false}>
-            <Image source={require('./assets/FOTO.jpg')} style={styles.logo} />
-            <Text style={styles.name}>Krhistopher Marttyn Gallego Sanchez</Text>
-            <Text style={styles.role}>Tecnólogo en Análisis y Desarrollo de Software</Text>
+            <View style={styles.headerGradient}>
+              <Image source={require('./assets/FOTO.png')} style={styles.logo} />
+              <Text style={styles.name}>Camilo Gallego Palacio</Text>
+              <Text style={styles.role}>Estudiante de Tecnología ADSO | Técnico en Programación de Software</Text>
+            </View>
+            
             <View style={styles.section}>
-              <Text style={styles.sectionTitle}>Sobre mí</Text>
+              <View style={styles.sectionHeader}>
+                <Text style={styles.sectionIcon}>📖</Text>
+                <Text style={styles.sectionTitle}>Sobre mí</Text>
+              </View>
               <View style={styles.listItem}>
                 <Text style={styles.itemText}>
-                  Soy un desarrollador en formación apasionado por el desarrollo web y móvil,
-                  con conocimientos en frontend y backend. Me interesa crear aplicaciones
-                  funcionales y bien estructuradas. Tengo experiencia académica en desarrollo
-                  de sistemas y bases de datos.
+                  Bachiller técnico con especialización en programación de software, diplomado en pensamiento 
+                  algorítmico en la Universidad EAM. Actualmente estudiante de Tecnología en Análisis y Desarrollo 
+                  de Software (ADSO) en el SENA. Apasionado por el desarrollo y análisis de software, con interés 
+                  en culminar la tecnología para posteriormente realizar la ingeniería de software. 
+                  Me destaco por mi pensamiento analítico y capacidad de liderazgo en proyectos tecnológicos.
                 </Text>
               </View>
             </View>
 
             <View style={styles.section}>
-              <Text style={styles.sectionTitle}>Habilidades Técnicas</Text>
+              <View style={styles.sectionHeader}>
+                <Text style={styles.sectionIcon}>⚡</Text>
+                <Text style={styles.sectionTitle}>Habilidades Técnicas</Text>
+              </View>
               <View style={styles.skillsContainer}>
+                <View style={styles.skillBadge}><Text style={styles.skillText}>Python</Text></View>
+                <View style={styles.skillBadge}><Text style={styles.skillText}>Flask</Text></View>
+                <View style={styles.skillBadge}><Text style={styles.skillText}>JavaScript</Text></View>
+                <View style={styles.skillBadge}><Text style={styles.skillText}>TypeScript</Text></View>
+                <View style={styles.skillBadge}><Text style={styles.skillText}>Node.js</Text></View>
+                <View style={styles.skillBadge}><Text style={styles.skillText}>React</Text></View>
+                <View style={styles.skillBadge}><Text style={styles.skillText}>Angular</Text></View>
                 <View style={styles.skillBadge}><Text style={styles.skillText}>Java</Text></View>
                 <View style={styles.skillBadge}><Text style={styles.skillText}>Spring Boot</Text></View>
-                <View style={styles.skillBadge}><Text style={styles.skillText}>TypeScript</Text></View>
-                <View style={styles.skillBadge}><Text style={styles.skillText}>JavaScript</Text></View>
+                <View style={styles.skillBadge}><Text style={styles.skillText}>API REST</Text></View>
                 <View style={styles.skillBadge}><Text style={styles.skillText}>HTML5/CSS3</Text></View>
+                <View style={styles.skillBadge}><Text style={styles.skillText}>Bootstrap</Text></View>
                 <View style={styles.skillBadge}><Text style={styles.skillText}>MySQL</Text></View>
-                <View style={styles.skillBadge}><Text style={styles.skillText}>Git/GitHub</Text></View>
-                <View style={styles.skillBadge}><Text style={styles.skillText}>APIs REST</Text></View>
-                <View style={styles.skillBadge}><Text style={styles.skillText}>Postman</Text></View>
+                <View style={styles.skillBadge}><Text style={styles.skillText}>PHPMyAdmin</Text></View>
+                <View style={styles.skillBadge}><Text style={styles.skillText}>Git</Text></View>
+                <View style={styles.skillBadge}><Text style={styles.skillText}>Scrum</Text></View>
               </View>
             </View>
 
-            {/* Proyecto Destacado */}
             <View style={styles.section}>
-              <Text style={styles.sectionTitle}>Proyecto Destacado</Text>
+              <View style={styles.sectionHeader}>
+                <Text style={styles.sectionIcon}>🚀</Text>
+                <Text style={styles.sectionTitle}>Proyectos Destacados</Text>
+              </View>
+              
               <Pressable style={styles.projectItem}>
-                <View style={styles.projectImagePlaceholder}>
+                <View style={styles.projectImageContainer}>
+                  <Image source={require('./assets/proyecto1.jpeg')} style={styles.projectImage} />
+                </View>
+                <View style={styles.projectInfo}>
+                  <Text style={styles.projectTitle}>SuaviCremas - Ecommerce</Text>
+                  <Text style={styles.projectSubtitle}>
+                    Tienda online de cremas y artefactos de limpieza con arquitectura monolito.
+                  </Text>
+                  <View style={styles.projectTechContainer}>
+                    <Text style={styles.projectTech}>Python</Text>
+                    <Text style={styles.projectTech}>Flask</Text>
+                    <Text style={styles.projectTech}>MySQL</Text>
+                  </View>
+                </View>
+                <Text style={styles.projectArrow}>→</Text>
+              </Pressable>
+
+              <Pressable style={styles.projectItem}>
+                <View style={styles.projectImageContainer}>
                   <Image source={require('./assets/image.png')} style={styles.projectImage} />
+                </View>
+                <View style={styles.projectInfo}>
+                  <Text style={styles.projectTitle}>MusicIA</Text>
+                  <Text style={styles.projectSubtitle}>
+                    Recomendación musical basada en estado de ánimo con Gemini y Spotify APIs.
+                  </Text>
+                  <View style={styles.projectTechContainer}>
+                    <Text style={styles.projectTech}>Python</Text>
+                    <Text style={styles.projectTech}>Gemini API</Text>
+                    <Text style={styles.projectTech}>Spotify API</Text>
+                  </View>
+                </View>
+                <Text style={styles.projectArrow}>→</Text>
+              </Pressable>
+
+              <Pressable style={styles.projectItem}>
+                <View style={styles.projectImageContainer}>
+                  <Image source={require('./assets/pulsegym.png')} style={styles.projectImage} />
                 </View>
                 <View style={styles.projectInfo}>
                   <Text style={styles.projectTitle}>Pulse GYM</Text>
                   <Text style={styles.projectSubtitle}>
-                    Pulse GYM es una plataforma tecnológica integral para gimnasios que combina control de acceso biométrico con huella digital, inteligencia artificial para
-                    generación de rutinas personalizadas.
+                    Plataforma integral para gimnasios con control de acceso biométrico e IA.
                   </Text>
-                  <Text style={styles.projectTech}>
-                    Java 21 - Spring Boot - MySQL - Angular - Kotlin - Microservicios
-                  </Text>
+                  <View style={styles.projectTechContainer}>
+                    <Text style={styles.projectTech}>Java 21</Text>
+                    <Text style={styles.projectTech}>Spring Boot</Text>
+                    <Text style={styles.projectTech}>Angular</Text>
+                  </View>
                 </View>
-                <Text style={styles.projectArrow}>›</Text>
+                <Text style={styles.projectArrow}>→</Text>
               </Pressable>
             </View>
 
             <View style={styles.section}>
-              <Text style={styles.sectionTitle}>Contacto</Text>
-              <Pressable style={styles.contactItem} onPress={() => openLink('krisgallego7@gmail.com')}>
-                <Image source={require('./assets/gmail.png')} style={styles.contactImage} />
-                <Text style={styles.contactText}>krisgallego7@gmail.com</Text>
+              <View style={styles.sectionHeader}>
+                <Text style={styles.sectionIcon}>📱</Text>
+                <Text style={styles.sectionTitle}>Contacto</Text>
+              </View>
+              <Pressable style={styles.contactItem} onPress={() => openLink('mailto:c.gallego3029@gmail.com')}>
+                <View style={styles.contactIconContainer}>
+                  <Image source={require('./assets/gmail.png')} style={styles.contactImage} />
+                </View>
+                <Text style={styles.contactText}>c.gallego3029@gmail.com</Text>
               </Pressable>
-              <Pressable style={styles.contactItem} onPress={() => openLink('https://github.com/krisgallego')}>
-                <Image source={require('./assets/github.png')} style={styles.contactImage} />
-                <Text style={styles.contactText}>GitHub: krisgallego</Text>
+              <Pressable style={styles.contactItem} onPress={() => openLink('https://github.com/gallegohp')}>
+                <View style={styles.contactIconContainer}>
+                  <Image source={require('./assets/github.png')} style={styles.contactImage} />
+                </View>
+                <Text style={styles.contactText}>github.com/gallegohp</Text>
               </Pressable>
-              <Pressable style={styles.contactItem} onPress={() => openLink('https://instagram.com/krhis_19x')}>
-                <Image source={require('./assets/instagram.png')} style={styles.contactImage} />
-                <Text style={styles.contactText}>Instagram: @krhis_19x</Text>
+              <Pressable style={styles.contactItem} onPress={() => openLink('https://www.instagram.com/gallegohp/')}>
+                <View style={styles.contactIconContainer}>
+                  <Image source={require('./assets/instagram.png')} style={styles.contactImage} />
+                </View>
+                <Text style={styles.contactText}>@gallegohp</Text>
               </Pressable>
             </View>
           </ScrollView>
@@ -89,103 +155,118 @@ export default function App() {
 const styles = StyleSheet.create({
   appBackground: {
     flex: 1,
-    backgroundColor: '#0a0a0a',
+    backgroundColor: '#0f172a',
     alignItems: 'center',
     justifyContent: 'center',
   },
   phone: {
-    width: 330,
-    height: 640,
-    backgroundColor: '#1a1a1a',
-    borderRadius: 44,
+    width: 350,
+    height: 680,
+    backgroundColor: '#1e293b',
+    borderRadius: 48,
     padding: 16,
     alignItems: 'center',
     shadowColor: '#000',
-    shadowOffset: { width: 0, height: 22 },
+    shadowOffset: { width: 0, height: 25 },
     shadowOpacity: 0.5,
-    shadowRadius: 34,
-    elevation: 14,
+    shadowRadius: 35,
+    elevation: 15,
+    borderWidth: 1,
+    borderColor: '#334155',
   },
   notch: {
-    width: 110,
-    height: 8,
-    backgroundColor: '#2a2a2a',
-    borderRadius: 5,
-    marginBottom: 14,
+    width: 120,
+    height: 10,
+    backgroundColor: '#0f172a',
+    borderRadius: 6,
+    marginBottom: 16,
   },
   screen: {
     flex: 1,
     width: '100%',
-    backgroundColor: '#121212',
-    borderRadius: 32,
+    backgroundColor: '#0f172a',
+    borderRadius: 36,
     padding: 20,
   },
   content: {
     alignItems: 'center',
-    paddingBottom: 24,
+    paddingBottom: 20,
+  },
+  headerGradient: {
+    alignItems: 'center',
+    marginBottom: 24,
+    width: '100%',
   },
   logo: {
-    width: 140,
-    height: 140,
+    width: 130,
+    height: 130,
     resizeMode: 'cover',
-    borderRadius: 100,
+    borderRadius: 65,
     borderWidth: 3,
-    borderColor: '#00b4d8',
+    borderColor: '#38bdf8',
     marginBottom: 16,
+    backgroundColor: '#1e293b',
   },
   name: {
-    color: '#ffffff',
-    fontSize: 20,
+    color: '#f8fafc',
+    fontSize: 22,
     fontWeight: '700',
-    marginBottom: 4,
+    marginBottom: 6,
     textAlign: 'center',
   },
   role: {
-    color: '#00b4d8',
-    fontSize: 13,
-    marginBottom: 20,
+    color: '#38bdf8',
+    fontSize: 12,
     textAlign: 'center',
+    opacity: 0.9,
   },
   section: {
     width: '100%',
-    marginBottom: 18,
+    marginBottom: 24,
+  },
+  sectionHeader: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: 12,
+  },
+  sectionIcon: {
+    fontSize: 18,
+    marginRight: 8,
   },
   sectionTitle: {
-    color: '#00f5d4',
-    fontSize: 16,
-    fontWeight: '700',
-    marginBottom: 10,
+    color: '#38bdf8',
+    fontSize: 18,
+    fontWeight: '600',
   },
   listItem: {
     width: '100%',
-    backgroundColor: '#1e1e1e',
-    borderRadius: 22,
+    backgroundColor: '#1e293b',
+    borderRadius: 20,
     padding: 16,
     borderWidth: 1,
-    borderColor: '#2a2a2a',
+    borderColor: '#334155',
   },
   itemText: {
-    color: '#a0a0a0',
+    color: '#cbd5e1',
     fontSize: 13,
     lineHeight: 20,
   },
   skillsContainer: {
     flexDirection: 'row',
     flexWrap: 'wrap',
-    gap: 8,
   },
   skillBadge: {
-    backgroundColor: '#1e1e1e',
+    backgroundColor: '#1e293b',
     borderWidth: 1,
-    borderColor: '#00b4d8',
+    borderColor: '#38bdf8',
     borderRadius: 20,
-    paddingHorizontal: 12,
+    paddingHorizontal: 14,
     paddingVertical: 6,
-    marginRight: 8,
-    marginBottom: 8,
+    marginRight: 10,
+    marginBottom: 10,
   },
   skillText: {
-    color: '#00b4d8',
+    color: '#38bdf8',
     fontSize: 11,
     fontWeight: '500',
   },
@@ -193,68 +274,88 @@ const styles = StyleSheet.create({
     width: '100%',
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: '#1e1e1e',
-    borderRadius: 22,
+    backgroundColor: '#1e293b',
+    borderRadius: 20,
     padding: 14,
     marginBottom: 12,
     borderWidth: 1,
-    borderColor: '#2a2a2a',
+    borderColor: '#334155',
   },
-  projectImagePlaceholder: {
-    width: 60,
-    height: 60,
-    borderRadius: 18,
+  projectImageContainer: {
+    width: 55,
+    height: 55,
+    borderRadius: 16,
     marginRight: 12,
-    marginLeft: 4,
+    backgroundColor: '#0f172a',
+    overflow: 'hidden',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   projectImage: {
-    width: 60,
-    height: 60,
+    width: 50,
+    height: 50,
     resizeMode: 'contain',
-    borderRadius: 18,
   },
   projectInfo: {
     flex: 1,
   },
   projectTitle: {
-    color: '#ffffff',
+    color: '#f8fafc',
     fontSize: 15,
-    fontWeight: '700',
+    fontWeight: '600',
     marginBottom: 4,
   },
   projectSubtitle: {
-    color: '#a0a0a0',
+    color: '#94a3b8',
     fontSize: 11,
-    lineHeight: 16,
+    lineHeight: 15,
+    marginBottom: 6,
+  },
+  projectTechContainer: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    gap: 6,
   },
   projectTech: {
-    color: '#00b4d8',
+    color: '#38bdf8',
     fontSize: 9,
-    marginTop: 4,
+    backgroundColor: '#0f172a',
+    paddingHorizontal: 8,
+    paddingVertical: 2,
+    borderRadius: 10,
+    overflow: 'hidden',
   },
   projectArrow: {
-    color: '#00f5d4',
-    fontSize: 24,
+    color: '#38bdf8',
+    fontSize: 20,
     marginLeft: 8,
   },
   contactItem: {
     width: '100%',
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: '#1e1e1e',
-    borderRadius: 22,
-    padding: 12,
+    backgroundColor: '#1e293b',
+    borderRadius: 20,
+    padding: 14,
     marginBottom: 10,
     borderWidth: 1,
-    borderColor: '#2a2a2a',
+    borderColor: '#334155',
   },
-  contactImage: {
-    width: 24,
-    height: 24,
+  contactIconContainer: {
+    width: 32,
+    height: 32,
+    borderRadius: 16,
+    backgroundColor: '#0f172a',
+    alignItems: 'center',
+    justifyContent: 'center',
     marginRight: 12,
   },
+  contactImage: {
+    width: 20,
+    height: 20,
+  },
   contactText: {
-    color: '#a0a0a0',
+    color: '#cbd5e1',
     fontSize: 13,
     flex: 1,
   },
