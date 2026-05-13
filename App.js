@@ -13,16 +13,19 @@ export default function App() {
         <View style={styles.screen}>
           <ScrollView contentContainerStyle={styles.content} showsVerticalScrollIndicator={false}>
             <Image source={require('./assets/FOTO.jpg')} style={styles.logo} />
-            <Text style={styles.name}>Krhistopher Marttyn Gallego Sanchez</Text>
+            <Text style={styles.name}>Isabela Ocampo Núñez</Text>
             <Text style={styles.role}>Tecnólogo en Análisis y Desarrollo de Software</Text>
             <View style={styles.section}>
               <Text style={styles.sectionTitle}>Sobre mí</Text>
               <View style={styles.listItem}>
                 <Text style={styles.itemText}>
-                  Soy un desarrollador en formación apasionado por el desarrollo web y móvil,
-                  con conocimientos en frontend y backend. Me interesa crear aplicaciones
-                  funcionales y bien estructuradas. Tengo experiencia académica en desarrollo
-                  de sistemas y bases de datos.
+                  Soy una desarrolladora en formación apasionada por la tecnología y la creación 
+                  de soluciones digitales. Tengo conocimientos en desarrollo web, bases de datos 
+                  y diseño de aplicaciones, con interés tanto en el frontend como en el backend. 
+                  Me gusta aprender constantemente y fortalecer mis habilidades en programación, 
+                  arquitectura de software y desarrollo de sistemas. Además, disfruto trabajar 
+                  en proyectos que combinen funcionalidad, organización y una buena experiencia 
+                  para el usuario.
                 </Text>
               </View>
             </View>
@@ -47,16 +50,17 @@ export default function App() {
               <Text style={styles.sectionTitle}>Proyecto Destacado</Text>
               <Pressable style={styles.projectItem}>
                 <View style={styles.projectImagePlaceholder}>
-                  <Image source={require('./assets/image.png')} style={styles.projectImage} />
+                  <Image source={require('./assets/morfik.png')} style={styles.projectImage} />
                 </View>
                 <View style={styles.projectInfo}>
-                  <Text style={styles.projectTitle}>Pulse GYM</Text>
+                  <Text style={styles.projectTitle}>MORFIK</Text>
                   <Text style={styles.projectSubtitle}>
-                    Pulse GYM es una plataforma tecnológica integral para gimnasios que combina control de acceso biométrico con huella digital, inteligencia artificial para
-                    generación de rutinas personalizadas.
+                    Este proyecto impulsa el emprendimiento colombiano mediante una plataforma 
+                    web que permite crear y gestionar tiendas digitales de forma fácil, segura 
+                    y sin conocimientos técnicos.
                   </Text>
                   <Text style={styles.projectTech}>
-                    Java 21 - Spring Boot - MySQL - Angular - Kotlin - Microservicios
+                    Java 21 - Spring Boot - MySQL - Angular
                   </Text>
                 </View>
                 <Text style={styles.projectArrow}>›</Text>
@@ -65,17 +69,17 @@ export default function App() {
 
             <View style={styles.section}>
               <Text style={styles.sectionTitle}>Contacto</Text>
-              <Pressable style={styles.contactItem} onPress={() => openLink('krisgallego7@gmail.com')}>
+              <Pressable style={styles.contactItem} onPress={() => openLink('isabelaocampo736qgmail.com')}>
                 <Image source={require('./assets/gmail.png')} style={styles.contactImage} />
-                <Text style={styles.contactText}>krisgallego7@gmail.com</Text>
+                <Text style={styles.contactText}>isabelaocampo736qgmail.com</Text>
               </Pressable>
-              <Pressable style={styles.contactItem} onPress={() => openLink('https://github.com/krisgallego')}>
+              <Pressable style={styles.contactItem} onPress={() => openLink('https://github.com/isabelaocampo09')}>
                 <Image source={require('./assets/github.png')} style={styles.contactImage} />
-                <Text style={styles.contactText}>GitHub: krisgallego</Text>
+                <Text style={styles.contactText}>GitHub: isabelaocampo09</Text>
               </Pressable>
-              <Pressable style={styles.contactItem} onPress={() => openLink('https://instagram.com/krhis_19x')}>
+              <Pressable style={styles.contactItem} onPress={() => openLink('https://instagram.com/isa_on_09')}>
                 <Image source={require('./assets/instagram.png')} style={styles.contactImage} />
-                <Text style={styles.contactText}>Instagram: @krhis_19x</Text>
+                <Text style={styles.contactText}>Instagram: @isa_on_09</Text>
               </Pressable>
             </View>
           </ScrollView>
