@@ -1,188 +1,218 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image, ScrollView, Pressable } from 'react-native';
+import { StatusBar } from "expo-status-bar";
+import {
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  ScrollView,
+  TouchableOpacity,
+} from "react-native";
 
 export default function App() {
   return (
-    <View style={styles.appBackground}>
+    <View style={styles.fondo}>
+      <StatusBar style="light" />
+
       <View style={styles.phone}>
         <View style={styles.notch} />
         <View style={styles.screen}>
-          <ScrollView contentContainerStyle={styles.content} showsVerticalScrollIndicator={false}>
-            <Image source={require('./assets/profile.png')} style={styles.logo} />
-            <Text style={styles.name}>Edwin Rozo Gómez</Text>
-            <Text style={styles.role}>Desarrollador React Native</Text>
+          <ScrollView
+            contentContainerStyle={styles.content}
+            showsVerticalScrollIndicator={false}
+          >
+            <View style={styles.card}>
+              <Image source={require("./assets/d.png")} style={styles.image} />
+              <Text style={styles.text}>Welcome</Text>
+            </View>
 
-            <View style={styles.section}>
-              <Text style={styles.sectionTitle}>Acerca de mí</Text>
-              <View style={styles.listItem}>
-                <Text style={styles.itemText}>
-                  Diseñador de experiencias móviles con enfoque minimalista. Me apasiona crear apps claras, funcionales y con una paleta azul-gris que transmite profesionalismo.
-                </Text>
+            <View style={styles.contenido}>
+              <Text style={styles.texto}>JHON DAYRON</Text>
+              <Text style={styles.textoCargo}>Programming Technician</Text>
+              <Image
+                source={require("./assets/d.png")}
+                style={styles.images1}
+              />
+            </View>
+
+            <View style={styles.tarjetaAbajo}>
+              <View style={styles.filaContacto}>
+                <View>
+                  <Text style={styles.textoChico}>¿Puedo ayudarle?</Text>
+                  <Text style={styles.textoGrande}>¿Trabajamos?</Text>
+                </View>
+                <TouchableOpacity style={styles.boton}>
+                  <Text style={styles.botonTexto}>Contactame</Text>
+                </TouchableOpacity>
               </View>
-            </View>
 
-            <View style={styles.section}>
-              <Text style={styles.sectionTitle}>Proyectos</Text>
-              <Pressable style={styles.projectItem}>
-                <View style={styles.projectImagePlaceholder}>
-                  <Image source={require('./assets/PA.png')} style={styles.projectImage} />
-                </View>
-                <View style={styles.projectInfo}>
-                  <Text style={styles.projectTitle}>Control de gastos</Text>
-                  <Text style={styles.projectSubtitle}>Seguimiento financiero con interfaz moderna y sencilla.</Text>
-                </View>
-                <Text style={styles.projectArrow}>›</Text>
-              </Pressable>
-              <Pressable style={styles.projectItem}>
-                <View style={styles.projectImagePlaceholder}>
-                  <Image source={require('./assets/cg.png')} style={styles.projectImage} />
-                </View>
-                <View style={styles.projectInfo}>
-                  <Text style={styles.projectTitle}>Landing para app</Text>
-                  <Text style={styles.projectSubtitle}>Página de bienvenida con estilo minimalista y clara jerarquía.</Text>
-                </View>
-                <Text style={styles.projectArrow}>›</Text>
-              </Pressable>
-            </View>
+              <View style={styles.filaTarjetas}>
+                <TouchableOpacity
+                  style={[styles.tarjetita, styles.tarjetaRosa]}
+                >
+                  <Text style={styles.tarjetaIcono}>💼</Text>
+                  <Text style={styles.tarjetaTexto}>Mis trabajos</Text>
+                </TouchableOpacity>
 
-            <View style={styles.section}>
-              <Text style={styles.sectionTitle}>Estudios</Text>
-              <View style={styles.listItem}>
-                <Text style={styles.itemText}>
-                  Ingeniería de Sistemas · Certificación React Native · Talleres de UI/UX y desarrollo móvil.
-                </Text>
+                <TouchableOpacity
+                  style={[styles.tarjetita, styles.tarjetaVerde]}
+                >
+                  <Text style={styles.tarjetaIcono}>🪪</Text>
+                  <Text style={styles.tarjetaTexto}>Sobre mi</Text>
+                </TouchableOpacity>
+
+                <TouchableOpacity
+                  style={[styles.tarjetita, styles.tarjetaAzul]}
+                >
+                  <Text style={styles.tarjetaIcono}>📍</Text>
+                  <Text style={styles.tarjetaTexto}>Referencias</Text>
+                </TouchableOpacity>
               </View>
             </View>
           </ScrollView>
         </View>
       </View>
-      <StatusBar style="light" />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  appBackground: {
+  fondo: {
     flex: 1,
-    backgroundColor: '#0f172a',
-    alignItems: 'center',
-    justifyContent: 'center',
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: "#5b5b5d",
   },
   phone: {
-    width: 330,
-    height: 640,
-    backgroundColor: '#152d4d',
-    borderRadius: 44,
-    padding: 16,
-    alignItems: 'center',
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 22 },
-    shadowOpacity: 0.28,
-    shadowRadius: 34,
-    elevation: 14,
+    width: 300,
+    height: 600,
+    backgroundColor: "#2a2e3d",
+    borderRadius: 40,
+    alignItems: "center",
   },
   notch: {
-    width: 110,
-    height: 8,
-    backgroundColor: '#1b3c6f',
-    borderRadius: 5,
-    marginBottom: 14,
+    position: "absolute",
+    width: 130,
+    height: 17,
+    backgroundColor: "#fffefe",
+    borderRadius: 15,
+    top: 12,
+    justifyContent: "center",
+    alignItems: "center",
   },
   screen: {
-    flex: 1,
-    width: '100%',
-    backgroundColor: '#f4f7fb',
-    borderRadius: 32,
-    padding: 20,
+    width: 280,
+    height: 540,
+    marginTop: 40,
+    backgroundColor: "#fff",
+    borderRadius: 25,
+    overflow: "hidden",
   },
-  content: {
-    alignItems: 'center',
-    paddingBottom: 24,
+  
+  card: {
+    width: "100%",
+    height: 540,
+    backgroundColor: "#7541ad",
+    borderRadius: 20,
+    overflow: "hidden",
   },
-  logo: {
-    width: 140,
-    height: 140,
-    resizeMode: 'cover',
-    borderRadius: 100,
-    borderWidth: 3,
-    borderColor: '#dbe7fb',
-    marginBottom: 16,
+  text: {
+    textShadowColor: "rgb(36, 31, 35)",
+    textShadowOffset: { width: 0, height: 0 },
+    textShadowRadius: 10,
+    position: "absolute",
+    right: 50,
+    top: 190,
+    fontSize: 90,
+    fontWeight: "bold",
+    color: "white",
+    transform: [{ rotate: "-90deg" }],
   },
-  name: {
-    color: '#102a43',
-    fontSize: 22,
-    fontWeight: '700',
-    marginBottom: 4,
+  image: {
+    width: 350,
+    height: 540,
+    position: "absolute",
+    right: -70,
   },
-  role: {
-    color: '#475569',
-    fontSize: 14,
-    marginBottom: 20,
+  contenido: {
+    width: "auto",
+    height: 380,
+    borderRadius: 20,
+    backgroundColor: "#7541ad",
   },
-  section: {
-    width: '100%',
-    marginBottom: 18,
+  images1: {
+    width: 200,
+    height: 250,
+    borderRadius: 20,
+    resizeMode: "cover",
+    top: 20,
+    alignSelf: "center",
   },
-  sectionTitle: {
-    color: '#0f172a',
-    fontSize: 16,
-    fontWeight: '700',
-    marginBottom: 10,
-  },
-  listItem: {
-    width: '100%',
-    backgroundColor: '#e8effa',
-    borderRadius: 22,
-    padding: 16,
-    borderWidth: 1,
-    borderColor: '#d6e4f2',
-  },
-  itemText: {
-    color: '#334155',
-    fontSize: 13,
-    lineHeight: 20,
-  },
-  projectItem: {
-    width: '100%',
-    flexDirection: 'row',
-    alignItems: 'center',
-    backgroundColor: '#ffffff',
-    borderRadius: 22,
-    padding: 14,
-    marginBottom: 12,
-    borderWidth: 1,
-    borderColor: '#dbe7fb',
-  },
-  projectImagePlaceholder: {
-    width: 60,
-    height: 60,
-    borderRadius: 18,
-    marginRight: 12,
-    marginLeft: 4,
-  },
-  projectImage: {
-    width: 60,
-    height: 60,
-    resizeMode: 'contain',
-    borderRadius: 18,
-  },
-  projectInfo: {
-    flex: 1,
-  },
-  projectTitle: {
-    color: '#102a43',
+  texto: {
+    top: 10,
+    left: 10,
     fontSize: 15,
-    fontWeight: '700',
-    marginBottom: 4,
+    color: "white",
   },
-  projectSubtitle: {
-    color: '#475569',
+  textoCargo: {
+    top: 10,
+    left: 10,
     fontSize: 13,
-    lineHeight: 19,
+    color: "#d4b8ff",
   },
-  projectArrow: {
-    color: '#2e4eb8',
-    fontSize: 24,
-    marginLeft: 8,
+
+  tarjetaAbajo: {
+    backgroundColor: "white",
+    height: 170,
+    borderRadius: 20,
+    padding: 14,
+    gap: 10,
+  },
+  filaContacto: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+  },
+  textoChico: {
+    fontSize: 11,
+    color: "#9aa0b8",
+  },
+  textoGrande: {
+    fontSize: 14,
+    fontWeight: "700",
+    color: "#1a2040",
+  },
+  boton: {
+    backgroundColor: "#8b5cf6",
+    borderRadius: 20,
+    paddingVertical: 9,
+    paddingHorizontal: 16,
+  },
+  botonTexto: {
+    color: "white",
+    fontWeight: "700",
+    fontSize: 12,
+  },
+  filaTarjetas: {
+    top: 10,
+    flexDirection: "row",
+    gap: 8,
+  },
+  tarjetita: {
+    top: 10,
+    height: 80,
+    flex: 1,
+    borderRadius: 14,
+    padding: 10,
+    gap: 6,
+  },
+  tarjetaRosa: { backgroundColor: "#e8a070" },
+  tarjetaVerde: { backgroundColor: "#2ec4b6" },
+  tarjetaAzul: { backgroundColor: "#6faee8" },
+  tarjetaIcono: { fontSize: 16 },
+  tarjetaTexto: {
+    fontSize: 10,
+    fontWeight: "700",
+    color: "white",
+    lineHeight: 15,
   },
 });
