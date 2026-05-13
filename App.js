@@ -8,15 +8,15 @@ export default function App() {
         <View style={styles.notch} />
         <View style={styles.screen}>
           <ScrollView contentContainerStyle={styles.content} showsVerticalScrollIndicator={false}>
-            <Image source={require('./assets/profile.png')} style={styles.logo} />
-            <Text style={styles.name}>Edwin Rozo Gómez</Text>
-            <Text style={styles.role}>Desarrollador React Native</Text>
+            <Image source={require('./assets/mi foto.png')} style={styles.logo} />
+            <Text style={styles.name}>Stefania Puerta</Text>
+            <Text style={styles.role}>Tecnologa en Analisi y Desarrollo de Software</Text>
 
             <View style={styles.section}>
               <Text style={styles.sectionTitle}>Acerca de mí</Text>
               <View style={styles.listItem}>
                 <Text style={styles.itemText}>
-                  Diseñador de experiencias móviles con enfoque minimalista. Me apasiona crear apps claras, funcionales y con una paleta azul-gris que transmite profesionalismo.
+                  Soy tecnologa en analisis y desarrollo de software, tengo habilidades en programacion, bases de datos, diseño web y documentacion. Tambien soy respetuosa, puntual, trabajo bien en equipo, tengo buena actitud y muchas ganas de aprender cada dia mas.
                 </Text>
               </View>
             </View>
@@ -25,21 +25,21 @@ export default function App() {
               <Text style={styles.sectionTitle}>Proyectos</Text>
               <Pressable style={styles.projectItem}>
                 <View style={styles.projectImagePlaceholder}>
-                  <Image source={require('./assets/PA.png')} style={styles.projectImage} />
+                  <Image source={require('./assets/LOGO.jpeg')} style={styles.projectImage} />
                 </View>
                 <View style={styles.projectInfo}>
-                  <Text style={styles.projectTitle}>Control de gastos</Text>
-                  <Text style={styles.projectSubtitle}>Seguimiento financiero con interfaz moderna y sencilla.</Text>
+                  <Text style={styles.projectTitle}>EduPlanner</Text>
+                  <Text style={styles.projectSubtitle}>Sistema educativo de gereación de horarios con IA.</Text>
                 </View>
                 <Text style={styles.projectArrow}>›</Text>
               </Pressable>
               <Pressable style={styles.projectItem}>
                 <View style={styles.projectImagePlaceholder}>
-                  <Image source={require('./assets/cg.png')} style={styles.projectImage} />
+                  <Image source={require('./assets/logo.jpg')} style={styles.projectImage} />
                 </View>
                 <View style={styles.projectInfo}>
-                  <Text style={styles.projectTitle}>Landing para app</Text>
-                  <Text style={styles.projectSubtitle}>Página de bienvenida con estilo minimalista y clara jerarquía.</Text>
+                  <Text style={styles.projectTitle}>Velvet Aromas</Text>
+                  <Text style={styles.projectSubtitle}>Teinda online de velas aromaticas personalizadas</Text>
                 </View>
                 <Text style={styles.projectArrow}>›</Text>
               </Pressable>
@@ -49,7 +49,7 @@ export default function App() {
               <Text style={styles.sectionTitle}>Estudios</Text>
               <View style={styles.listItem}>
                 <Text style={styles.itemText}>
-                  Ingeniería de Sistemas · Certificación React Native · Talleres de UI/UX y desarrollo móvil.
+                  Tecnico en Desarrollo de Software· Bachiller ·
                 </Text>
               </View>
             </View>
@@ -64,27 +64,28 @@ export default function App() {
 const styles = StyleSheet.create({
   appBackground: {
     flex: 1,
-    backgroundColor: '#0f172a',
+    backgroundColor: '#ecf7cb',
     alignItems: 'center',
     justifyContent: 'center',
   },
   phone: {
     width: 330,
     height: 640,
-    backgroundColor: '#152d4d',
+    backgroundColor: '#9bafc9',
     borderRadius: 44,
-    padding: 16,
+    padding: 13,
     alignItems: 'center',
-    shadowColor: '#000',
+    shadowColor: '#000000',
     shadowOffset: { width: 0, height: 22 },
     shadowOpacity: 0.28,
     shadowRadius: 34,
     elevation: 14,
   },
   notch: {
-    width: 110,
+    width: 8,
+    borderRadius: 50,
     height: 8,
-    backgroundColor: '#1b3c6f',
+    backgroundColor: '#335587',
     borderRadius: 5,
     marginBottom: 14,
   },
