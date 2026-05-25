@@ -8,16 +8,16 @@ export default function App() {
         <View style={styles.notch} />
         <View style={styles.screen}>
           <ScrollView contentContainerStyle={styles.content} showsVerticalScrollIndicator={false}>
-            <Image source={require('./assets/profile.png')} style={styles.logo} />
-            <Text style={styles.name}>Edwin Rozo Gómez</Text>
-            <Text style={styles.role}>Desarrollador React Native</Text>
+            <Image source={require('./assets/kari.jpeg')} style={styles.logo} />
+            <Text style={styles.name}>Kariangel Silva</Text>
+            <Text style={styles.role}>Analista Desarrolladora </Text>
 
             <View style={styles.section}>
               <Text style={styles.sectionTitle}>Acerca de mí</Text>
               <View style={styles.listItem}>
                 <Text style={styles.itemText}>
-                  Diseñador de experiencias móviles con enfoque minimalista. Me apasiona crear apps claras, funcionales y con una paleta azul-gris que transmite profesionalismo.
-                </Text>
+               Eres una persona curiosa y dedicada a aprender sobre desarrollo de software, especialmente temas como programación, Git, React Native y arquitecturas de software. Aunque a veces los errores técnicos te frustran, sigues buscando soluciones y mejorando poco a poco tus habilidades.
+ </Text>
               </View>
             </View>
 
@@ -25,21 +25,21 @@ export default function App() {
               <Text style={styles.sectionTitle}>Proyectos</Text>
               <Pressable style={styles.projectItem}>
                 <View style={styles.projectImagePlaceholder}>
-                  <Image source={require('./assets/PA.png')} style={styles.projectImage} />
+                  <Image source={require('./assets/eduplanner.webp')} style={styles.projectImage} />
                 </View>
                 <View style={styles.projectInfo}>
-                  <Text style={styles.projectTitle}>Control de gastos</Text>
-                  <Text style={styles.projectSubtitle}>Seguimiento financiero con interfaz moderna y sencilla.</Text>
+                  <Text style={styles.projectTitle}>EduPlanner</Text>
+                  <Text style={styles.projectSubtitle}>Software Educativo</Text>
                 </View>
                 <Text style={styles.projectArrow}>›</Text>
               </Pressable>
               <Pressable style={styles.projectItem}>
                 <View style={styles.projectImagePlaceholder}>
-                  <Image source={require('./assets/cg.png')} style={styles.projectImage} />
+                  <Image source={require('./assets/vela.jpg')} style={styles.projectImage} />
                 </View>
                 <View style={styles.projectInfo}>
-                  <Text style={styles.projectTitle}>Landing para app</Text>
-                  <Text style={styles.projectSubtitle}>Página de bienvenida con estilo minimalista y clara jerarquía.</Text>
+                  <Text style={styles.projectTitle}>NK VELAS</Text>
+                  <Text style={styles.projectSubtitle}>Proyecto Formativo</Text>
                 </View>
                 <Text style={styles.projectArrow}>›</Text>
               </Pressable>
@@ -49,7 +49,9 @@ export default function App() {
               <Text style={styles.sectionTitle}>Estudios</Text>
               <View style={styles.listItem}>
                 <Text style={styles.itemText}>
-                  Ingeniería de Sistemas · Certificación React Native · Talleres de UI/UX y desarrollo móvil.
+                  Bachillerato ·
+                 Tecnico en Programacion de Software · 
+                 Tecnologo en Analisis y desarrollo de software.
                 </Text>
               </View>
             </View>
@@ -64,15 +66,15 @@ export default function App() {
 const styles = StyleSheet.create({
   appBackground: {
     flex: 1,
-    backgroundColor: '#0f172a',
+    backgroundColor: '#121111',
     alignItems: 'center',
     justifyContent: 'center',
   },
   phone: {
     width: 330,
     height: 640,
-    backgroundColor: '#152d4d',
-    borderRadius: 44,
+    backgroundColor: '#8b50fb',
+    borderRadius: 49,
     padding: 16,
     alignItems: 'center',
     shadowColor: '#000',
@@ -80,6 +82,7 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.28,
     shadowRadius: 34,
     elevation: 14,
+    
   },
   notch: {
     width: 110,
@@ -91,7 +94,7 @@ const styles = StyleSheet.create({
   screen: {
     flex: 1,
     width: '100%',
-    backgroundColor: '#f4f7fb',
+    backgroundColor: '#222426',
     borderRadius: 32,
     padding: 20,
   },
@@ -105,17 +108,17 @@ const styles = StyleSheet.create({
     resizeMode: 'cover',
     borderRadius: 100,
     borderWidth: 3,
-    borderColor: '#dbe7fb',
+    borderColor: '#8b50fb',
     marginBottom: 16,
   },
   name: {
-    color: '#102a43',
+    color: '#463a72',
     fontSize: 22,
     fontWeight: '700',
     marginBottom: 4,
   },
   role: {
-    color: '#475569',
+    color: '#101011',
     fontSize: 14,
     marginBottom: 20,
   },
@@ -124,21 +127,21 @@ const styles = StyleSheet.create({
     marginBottom: 18,
   },
   sectionTitle: {
-    color: '#0f172a',
+    color: '#823aa8',
     fontSize: 16,
     fontWeight: '700',
     marginBottom: 10,
   },
   listItem: {
     width: '100%',
-    backgroundColor: '#e8effa',
+    backgroundColor: '#262424',
     borderRadius: 22,
     padding: 16,
-    borderWidth: 1,
-    borderColor: '#d6e4f2',
+    borderWidth: 2,
+    borderColor: '#8f4187',
   },
   itemText: {
-    color: '#334155',
+    color: '#ffffff',
     fontSize: 13,
     lineHeight: 20,
   },
@@ -146,7 +149,7 @@ const styles = StyleSheet.create({
     width: '100%',
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: '#ffffff',
+    backgroundColor: '#262424',
     borderRadius: 22,
     padding: 14,
     marginBottom: 12,
@@ -170,7 +173,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   projectTitle: {
-    color: '#102a43',
+    color: '#1c161d',
     fontSize: 15,
     fontWeight: '700',
     marginBottom: 4,
@@ -181,7 +184,7 @@ const styles = StyleSheet.create({
     lineHeight: 19,
   },
   projectArrow: {
-    color: '#2e4eb8',
+    color: '#681f98',
     fontSize: 24,
     marginLeft: 8,
   },
